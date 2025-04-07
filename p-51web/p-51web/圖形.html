@@ -1,0 +1,105 @@
+<html>
+<head>
+
+<style>
+    div{
+        width:100px;
+        height:80px;
+        margin-bottom:10px;
+        border: 10px red solid;
+    }
+    #sd{
+        width:100px;
+        height:80px;
+        background:radial-gradient(circle,rgb(204, 68, 113),red,blue 25%);
+        border-width: 10px yellow solid;
+    }
+    .wa{
+        width:100px;
+        height:80px;
+        background :linear-gradient(270deg,blue,yellow 60%,red);
+        display:inline-block
+    }
+    #sd1{
+        width:100px;
+        height:80px;
+        background: repeating-linear-gradient(45deg,rgb(8, 5, 190) 50%,rgb(204, 68, 113) 55%);
+        border-style:solid dashed dotted double;
+        border-width: 10px;
+    }
+    .wa2{
+        width:100px;
+        height:80px;
+        background: repeating-conic-gradient(rgb(8, 5, 190) 15%,rgb(204, 68, 113) 35%,yellow 50%);
+        border-width: 10px;
+        border:20px black solid;
+    }
+    .wa1{
+        width:100px;
+        height:80px;
+        background :conic-gradient(from 270deg,blue,yellow 60%,red);
+        border:20px solid transparent;
+        border-color: black red blue yellow;
+    }
+    #sd1{
+        width:100px;
+        height:80px;
+        background: repeating-linear-gradient(45deg,rgb(8, 5, 190) 50%,rgb(204, 68, 113) 55%);
+    }
+    #sd3{
+        width:100px;
+        height:80px;
+        animation:k1 0.5s infinite linear;
+    }
+    #sd4{
+        width:100px;
+        height:80px;
+        border-radius: 10px 20px 50px;
+        border:2px black solid;
+    }
+    #sd5{
+        width:100px;
+        height:80px;
+        border-radius: 50%;
+        border:2px black solid;
+    }
+    #sd6{
+        width:100px;
+        height:80px;
+        border-radius: 50% 50% 0 0;
+        border:2px black solid;
+    }
+    @keyframes k1{
+        0%{background: repeating-linear-gradient(45deg,rgb(8, 5, 190) 50%,rgb(204, 68, 113) 55%);}
+        50%{background: repeating-linear-gradient(45deg,rgb(20, 190, 5) 50%,rgb(68, 204, 197) 55%);}
+        100%{background: repeating-linear-gradient(45deg,rgb(8, 5, 190) 50%,rgb(204, 68, 113) 55%);}
+    }
+    #sd7{
+        width:100px;
+        height:80px;
+        border:200px red solid;
+        border-radius: 50px 20px 0 0;
+        
+    }
+</style>
+</head>
+<body>
+<div id="sd"></div>
+<div id="sd1"></div>
+<div class="wa1"></div>
+<div class="wa2"></div>
+<div class="wa"></div>
+<div class="wa"></div>
+<div class="wa"></div>
+<div class="wa"></div>
+<div id="sd2"></div>
+<div id="sd3"></div>
+<div class="wa1"></div>
+<div class="wa2"></div>
+<div id="sd4"></div>
+<div id="sd5"></div>
+<div id="sd7"></div>
+<div id="sd6"></div>
+</body>
+</html>
+<!--鑽石 聖誕樹 冰淇淋-->

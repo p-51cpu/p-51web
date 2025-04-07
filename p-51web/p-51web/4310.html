@@ -1,0 +1,70 @@
+<html>
+<head>
+<style>
+    #sd{
+        width:100px;
+        height:80px;
+        background:radial-gradient(circle,rgb(204, 68, 113),red,blue 25%);
+    }
+    .wa{
+        width:100px;
+        height:80px;
+        background :linear-gradient(270deg,blue,yellow 60%,red);
+        display:inline-block
+    }
+    #sd1{
+        width:100px;
+        height:80px;
+        background: repeating-linear-gradient(45deg,rgb(8, 5, 190) 50%,rgb(204, 68, 113) 55%);
+    }
+    .wa2{
+        width:100px;
+        height:80px;
+        background: repeating-conic-gradient(rgb(8, 5, 190) 15%,rgb(204, 68, 113) 35%,yellow 50%);
+    }
+    .wa1{
+        width:100px;
+        height:80px;
+        background :conic-gradient(from 270deg,blue,yellow 60%,red);
+    }
+    #sd1{
+        width:100px;
+        height:80px;
+        background: repeating-linear-gradient(45deg,rgb(8, 5, 190) 50%,rgb(204, 68, 113) 55%);
+    }
+    #sd3{
+        width:100px;
+        height:80px;
+        animation:k1 0.5s infinite linear;
+    }
+    @keyframes k1{
+        0%{background: repeating-linear-gradient(45deg,rgb(8, 5, 190) 50%,rgb(204, 68, 113) 55%);}
+        50%{background: repeating-linear-gradient(45deg,rgb(20, 190, 5) 50%,rgb(68, 204, 197) 55%);}
+        100%{background: repeating-linear-gradient(45deg,rgb(8, 5, 190) 50%,rgb(204, 68, 113) 55%);}
+    }
+</style>
+</head>
+<body>
+<div id="sd"></div>
+<div id="sd1"></div>
+<div class="wa1"></div>
+<div class="wa2"></div>
+<div class="wa"></div>
+<div class="wa"></div>
+<div class="wa"></div>
+<div class="wa"></div>
+<div id="sd2"></div>
+<div id="sd3"></div>
+<div class="wa1"></div>
+<div class="wa2"></div>
+
+</body>
+</html>
+<!--
+name
+#hex
+rgb 0-255
+rgba +a0-1
+hsl(色相0-360彩度0-100%亮度0-100%)
+hsla(h,s,l,可見度0-1)
+-->
