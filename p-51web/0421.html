@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>0421</title>
+    <meta charset="UTF-8">
+    <style>
+    #ss{
+        display: grid;
+        grid: repeat(3,90px) / repeat(4,90px);
+    }
+    </style>
+    <script>
+        function game(){
+            cards=[1,1,2,2,3,3,4,4,5,5,6,6];
+            
+            b=document.getElementById("ss");
+            for(i=0;i<12;i++){
+                a=document.createElement("img");
+                a.src=`pic/0.png`;
+                b.appendChild(a);
+                a.addEventListener("click",pickImg)
+            }
+            imgs=Array.from(document.getElementsByClassName("card"));
+            gast=false;
+        }
+        function start(){
+            
+            cards.sort((a,b)=>(Math.random()-0.5));
+            
+            for(i=0;i<imgs.length;i++){
+                imgs[i].src=`pic/${cards[i]}.png`;
+            }
+            setTimeout(function(){imgs.forEach(img=>{img.src="pic/0.png";})},3000);
+            gast=true;
+            p1=-1;p2=-1;
+        }
+        function pickImg(){
+            if(!gast) return;
+            img=event.target;
+            idx=imgs.indexOf(img);
+            if(p1==-1){
+                p1=idx;
+                img.src=`pic/${cards[p1]}.png`
+            }else{
+                p2=idx;
+                img.src=`pic/${cards[p2]}.png`
+            }
+            if(cards[p1]==cards[p2]){
+                p1=-1;p2=-1
+            }else{
+                
+            }
+            
+        }
+    </script>
+</head>
+<body onload="game();">
+
+    
+    <div id="ss"></div>
+    <button onclick="start">go</button>
+
+</body>
+</html>
