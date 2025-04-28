@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>0428</title>
+    <meta charset="UTF-8">
+    <style>
+        .s{
+            display: inline-block;
+            padding: 5px 10px;
+            border:5px solid gray;
+            text-align: center;
+            font-size: 32px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+    <script>
+        function kb(){
+            console.log(event.key);
+            event.preventDefault();
+        }
+        function genWord(){
+            len=Math.floor(math.random()*7)+3;
+            str="";
+            for(i=0;i<len;i++){
+                Caps=[65,97];
+                randnum=Math.floor(Math.random()*26)+Caps[Math.floor(math.random()*2)]
+            }
+            return str
+        }
+        function click(){
+            document.getElementById("btnstart").style.display="none";
+            t1=setInterval(function(){
+                a=document.createElement(div);
+                a.className="word";
+                a.innerHTML=genWord();
+                a.pos=(x:rand(10,500),y:0);
+                a.style.left=a.pos.x+"px";
+                document.body.appendChild(a);},2000);
+        }
+    </script>
+</head>
+<body onkeydown="kb();">
+    <button id="btnstart" onclick="click();">btn</button>
+    <hr>
+    <span class="s">A</span>
+    <div id="ss" onmousemove="ms();"></div>
+    <input type="text" id="kb" placeholder="5555" onkeydown="d();" onkeypress="" onkeyup="">
+    <div id="kbo">kbout</div>
+
+</body>
+</html>
