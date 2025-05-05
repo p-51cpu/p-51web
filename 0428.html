@@ -11,11 +11,21 @@
             font-size: 32px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
+        red{
+            color:red;
+        }
     </style>
     <script>
+        game=0;
         function kb(){
             console.log(event.key);
             event.preventDefault();
+            if(event.key=="enter"){
+                input+="";
+                words=Array.getElementById;
+            }else if((code>=65&&code<=97)||(code==97)){
+
+            }
         }
         function genWord(){
             len=Math.floor(math.random()*7)+3;
@@ -24,24 +34,29 @@
                 Caps=[65,97];
                 randnum=Math.floor(Math.random()*26)+Caps[Math.floor(math.random()*2)]
             }
-            return str
+            return str;
         }
+        /*a.substr(0,a.length-1)#刪最後一個字 event.key=="" google fonts#字體
         function click(){
             document.getElementById("btnstart").style.display="none";
             t1=setInterval(function(){
-                a=document.createElement(div);
+                a=document.createElement("div");
                 a.className="word";
                 a.innerHTML=genWord();
-                a.pos=(x:rand(10,500),y:0);
+                a.pos=(x:rand(10,document.body.offsetWidth-250),y:0);
                 a.style.left=a.pos.x+"px";
                 document.body.appendChild(a);},2000);
         }
+        */
+       setInterval(function(){document.getElementById("time")})
     </script>
 </head>
 <body onkeydown="kb();">
+    <div></div>
     <button id="btnstart" onclick="click();">btn</button>
     <hr>
     <span class="s">A</span>
+
     <div id="ss" onmousemove="ms();"></div>
     <input type="text" id="kb" placeholder="5555" onkeydown="d();" onkeypress="" onkeyup="">
     <div id="kbo">kbout</div>
