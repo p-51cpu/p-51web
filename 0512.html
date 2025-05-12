@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>0512</title>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background-image: url("grass.jpg");
+            background-size: 200px 140px;
+            position: relative;
+        }
+        #role{
+            width: 48px;
+            height: 72px;
+            background: url("sprite1.png");
+            background-position-y: 0px;
+            animation: walking 0.7s steps(3) infinite;
+            position:absolute;
+        }
+        @keyframes walking{
+            0%{background-position-x: -288px;}
+            100%{background-position-x: -432px;}
+        }
+    </style>
+    <script>
+        function game(){
+            role=document.getElementById("re");
+            role.pos={x:24,y:72};
+            role.mydir=0;
+            role.move=setInterval(function(){
+                if(role.pos.x<role.walktarget.x){
+                    role.pos.x++;
+                    role.mydir=2;
+                }else if(role.pos.x>role.walktarget.x){
+                    role.pos.x--;
+                    role.mydir=1;
+                }
+                if(role.pos.y<role.walktarget.y){
+                    role.pos.y++;
+                    role.mydir=3;
+                }else if(role.pos.y>role.walktarget.y){
+                    role.pos.y--;
+                    role.mydir=0;
+                }
+                role.style.left=role.pos.x+"px";
+                role.style.top=role.pos.y+"px";
+                role.style.backgroundPositionY=`-${role.mydir*72}px`
+            },50)
+        }
+        function ddd(){
+            event.preventDefault();
+            var key=event.key;
+            var dir=["ArrowDown","ArrowLeft","ArrowRight","ArrowUp"]
+            if(dir.includes(key)){
+                role.mydir=dir.IndexOf(key);
+                role.style.backgroundPositionY=(-72*mydir.indexOf(key))+"px";
+            }
+        }
+        function to(){
+            role.walktarget={x:event.x,y:event.y};
+        }
+    </script>
+</head>
+<body onload="game();" onkeydown="ddd();">
+    <div id="role"></div>
+
+</body>
+</html>
